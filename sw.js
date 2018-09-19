@@ -1,4 +1,5 @@
 var version = 'rev-v1';
+
 var urlsToCache = [
   '/',
   '/css/styles.css',
@@ -27,16 +28,14 @@ var urlsToCache = [
   '/images/umbrella.svg',
   '/js/app.js',
   '/js/localforage-1.4.0.js',
-  '/index.html',
-  'https://fonts.googleapis.com/icon?family=Material+Icons'
+  '/index.html'
 ];
 
 self.addEventListener('install', function(event) {
   console.log('[ServiceWorker] start install');
   // Perform install steps
   event.waitUntil(
-    caches.open(version)
-      .then(function(cache) {
+    caches.open(version).then(function(cache) {
         console.log('Opened Cache');
         return cache.addAll(urlsToCache);
       })
