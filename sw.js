@@ -35,8 +35,9 @@ self.addEventListener('install', function(event) {
   console.log('[ServiceWorker] start install');
   // Perform install steps
   event.waitUntil(
-    caches.open(version + 'fundamentals')
+    caches.open(version)
       .then(function(cache) {
+        console.log('Opened Cache');
         return cache.addAll(urlsToCache);
       })
       .then(function() {
