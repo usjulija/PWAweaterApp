@@ -34,7 +34,7 @@
       "sizes": "512x512",
       "type": "image/png"
     }],
-  "start_url": "/index.html",
+  "start_url": "https://usjulija.github.io/PWAweaterApp/",
   "display": "standalone",
   "background_color": "#247BA0",
   "theme_color": "#d9e4e2"
