@@ -409,25 +409,10 @@ function generateCard(data) {
   main.appendChild(card);
 }
 
-/*==============START APP WITH SELECTED CITIES AND SERVICE WORKER===============*/
+/*==============START APP WITH SELECTED CITIES===============*/
 function saveSelectedCities() {
   window.localforage.setItem('selecetedCitiesData', app);
   console.log('saved');
-}
-
-if ('serviceWorker' in navigator) {
-  console.log('service worker registration in progress');
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-    .then((registration) => {
-      console.log('Service Worker registration completed with scope: ',
-        registration.scope)
-    }, (err) => {
-      console.log('Service Worker registration failed', err)
-    })
-  })
-} else {
-  console.log('Service Workers not supported')
 }
 
 /*==============INITIATES APP===============*/

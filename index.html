@@ -62,6 +62,23 @@
       <p>...Locating</p>
     </div>
   </main>
+  <script type="text/javascript">
+  // register service worker
+  if ('serviceWorker' in navigator) {
+    console.log('service worker registration in progress');
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('Service Worker registration completed with scope: ',
+          registration.scope)
+      }, (err) => {
+        console.log('Service Worker registration failed', err)
+      })
+    })
+  } else {
+    console.log('Service Workers not supported')
+  }
+  </script>
   <script src="js/app.js"></script>
   <script src="js/localforage-1.4.0.js"></script>
 </body>
