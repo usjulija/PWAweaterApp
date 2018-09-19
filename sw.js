@@ -1,22 +1,43 @@
 var version = 'rev-v1';
 
-var urlsToCache = [
-  '/',
-  '/css/styles.css',
-  '/css/mixins.css',
-  '/js/app.js',
-  '/index.html'
-];
-
 self.addEventListener('install', function(event) {
   console.log('[ServiceWorker] start install');
   // Perform install steps
   event.waitUntil(
     caches.open(version).then(function(cache) {
         console.log('Opened Cache');
-        return cache.addAll(urlsToCache);
-      })
-      .then(function() {
+        return cache.addAll([
+          '/',
+          '/css/styles.css',
+          '/css/mixins.css',
+          '/images/01d.svg',
+          '/images/01n.svg',
+          '/images/02d.svg',
+          '/images/02n.svg',
+          '/images/03d.svg',
+          '/images/03n.svg',
+          '/images/04d.svg',
+          '/images/04n.svg',
+          '/images/09d.svg',
+          '/images/09n.svg',
+          '/images/10d.svg',
+          '/images/10n.svg',
+          '/images/11d.svg',
+          '/images/11n.svg',
+          '/images/13d.svg',
+          '/images/13n.svg',
+          '/images/50d.svg',
+          '/images/50n.svg',
+          '/images/celsius.svg',
+          '/images/error.svg',
+          '/images/fahrenheit.svg',
+          '/images/umbrella.svg',
+          '/js/app.js',
+          '/js/localforage-1.4.0.js',
+          '/index.html',
+          'https://fonts.googleapis.com/icon?family=Material+Icons'
+        ]);
+      }).then(function() {
         console.log('[ServiceWorker] install completed');
       })
   );
