@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="https://thumb.ibb.co/hjNyNK/apple_120.png" type="image/png" sizes="16x16">
+  <link href="css/styles.css" rel="stylesheet">
+  <title>WeatherApp</title>
+  <!-- manifest and meta theme color -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#d9e4e2">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Weather">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/images/icons/apple-167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-180.png">
+  <!-- Add icons for microsoft -->
+  <meta name="msapplication-TileImage" content="images/icons/umbrella144.png">
+<meta name="msapplication-TileColor" content="#d9e4e2">
+</head>
+<body>
+  <div class="modal-container">
+    <div class="modal">
+      <div class="close-modal">
+        <button id="modalCancel" aria-label="cancel and close modal" title="cancel"><i class="material-icons" style="font-size:25px">close</i></button>
+      </div>
+      <div class="modal-title">Search new city</div>
+      <form class="searchForm">
+        <input type="search" class="searchInput" placeholder="Enter city name..." name="search" aria-label="enter city name">
+        <button type="submit" title="search city">🔎</button>
+      </form>
+    </div>
+  </div>
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/umbrella.svg" alt="logo with umbrella">
+      <h1>what's the weather?</h1>
+    </div>
+    <div class="buttons-container">
+      <button id="location" aria-label="current location" title="current location"><i class="material-icons">location_on</i></button>
+      <button id="search" aria-label="add location" title="add location"><i class="material-icons">add</i></button>
+      <button id="refresh" aria-label="refresh" title="refresh"><i class="material-icons">autorenew</i></button>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider" tabindex="0" aria-label="fahrenheit to celsius and back" title="toggle temperature"></span>
+      </label>
+    </div>
+  </header>
+  <main id="app">
+    <div class='locating'>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 392 392" width=60>
+        <path fill="#247BA0" d="M392 186V5l-68 68a188 188 0 0 0-137-60 187 187 0 1 0 168 269l-36-18a147 147 0 1 1-24-163l6-6 91 91z"/>
+        <path fill="#444d61" d="M392 186l-91-91-6 6-85 85z"/>
+      </svg>
+      <p>...Locating</p>
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+  <script src="js/localforage-1.4.0.js"></script>
+</body>
+</html>
