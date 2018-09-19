@@ -27,7 +27,6 @@ var urlsToCache = [
   '/images/umbrella.svg',
   '/js/app.js',
   '/js/localforage-1.4.0.js',
-  '/js/localforage-1.4.0.js',
   '/index.html',
   'https://fonts.googleapis.com/icon?family=Material+Icons'
 ];
