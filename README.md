@@ -31,4 +31,4 @@ The application is designed from scratch, using Vanilla JavaScript ES6 syntax. D
 * [ServiceWorker: Revolution of the Web Platform](https://ponyfoo.com/articles/serviceworker-revolution)
 
 * Icons designed by [flaticon](https://www.flaticon.com/)
-* Icons designed by [freepik](https://www.flaticon.com/)
+* Icons designed by [freepik](https://www.freepik.com/)
