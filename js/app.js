@@ -409,11 +409,26 @@ function generateCard(data) {
   main.appendChild(card);
 }
 
-/*==============START APP WITH SELECTED CITIES===============*/
+/*==============START APP WITH SELECTED CITIES AND SERVICE WORKER===============*/
 function saveSelectedCities() {
   window.localforage.setItem('selecetedCitiesData', app);
   console.log('saved');
 }
+
+function serviceWorkerRegister() {
+  if ('serviceWorker' in navigator) {
+    console.log('CLIENT: service worker registration in progress.');
+    navigator.serviceWorker.register('./sw.js').then(function() {
+      console.log('CLIENT: service worker registration complete.');
+    }, function() {
+      console.log('CLIENT: service worker registration failure.');
+    });
+  } else {
+    console.log('CLIENT: service worker is not supported.');
+  }
+}
+
+serviceWorkerRegister();
 
 /*==============INITIATES APP===============*/
 document.addEventListener('DOMContentLoaded', function() {
