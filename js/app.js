@@ -139,10 +139,10 @@ function currentDate(date) {
 
 //funcction to close card
 function closeCard(event) {
-  let card = event.target.parentNode.parentNode.parentNode;
+  let card = event.target.parentNode.parentNode;
   let number = parseInt(card.getAttribute('data-id'));
-
-  event.target.parentNode.parentNode.parentNode.parentNode.removeChild(card);
+  console.log(card);
+  event.target.parentNode.parentNode.parentNode.removeChild(card);
 
   //remove from the selected cities array
   let indexNum = app.selectedCities.findIndex(i => i.id === number);
@@ -171,7 +171,7 @@ function getLocation() {
     main.innerHTML = `
     <section class="card">
       <div class="close">
-        <button onclick="closeCard(event)" aria-label="remove message" title="remove message"><i class="material-icons" style="font-size:25px">close</i></button>
+        <button onclick="closeCard(event)" aria-label="remove message" title="remove message">X</button>
       </div>
       <div class="error">
         <img src="./images/error.svg" alt="cloud with umbrella">
@@ -198,7 +198,7 @@ function getLocation() {
     main.innerHTML = `
     <section class="card">
       <div class="close">
-        <button onclick="closeCard(event)" aria-label="remove message" title="remove message"><i class="material-icons" style="font-size:25px">close</i></button>
+        <button onclick="closeCard(event)" aria-label="remove message" title="remove message">X</button>
       </div>
       <div class="error">
         <img src="./images/error.svg" alt="cloud with umbrella">
@@ -264,7 +264,7 @@ function fetchWeather(url) {
       main.innerHTML = `
         <section class="card">
           <div class="close">
-            <button onclick="closeCard(event)" aria-label="remove message" title="remove message"><i class="material-icons" style="font-size:25px">close</i></button>
+            <button onclick="closeCard(event)" aria-label="remove message" title="remove message">X</button>
           </div>
           <div class="error">
             <img src="./images/error.svg" alt="cloud with umbrella">
@@ -299,7 +299,7 @@ function generateCard(data) {
   //current weather
   card.innerHTML = `
   <div class="close">
-    <button onclick="closeCard(event)" aria-label="remove city" title="remove city"><i class="material-icons" style="font-size:25px">close</i></button>
+    <button onclick="closeCard(event)" aria-label="remove city" title="remove city">&#10006;</button>
   </div>
   <h2>${data.label}</h2>
   <h3>Today, ${currentDate(data.currently.time)}</h3>

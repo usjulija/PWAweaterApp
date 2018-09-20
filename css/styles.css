@@ -234,8 +234,10 @@ h1, h3 {
   justify-content: flex-end;
   -ms-flex-pack: flex-end; }
   .close button, .modal .close-modal button {
+    font-size: 1.7em;
     border: 0;
     background-color: transparent;
+    padding-right: 5px;
     cursor: pointer;
     color: #14213D; }
     .close button:hover, .modal .close-modal button:hover, .close button:active, .modal .close-modal button:active, .close button:focus, .modal .close-modal button:focus {

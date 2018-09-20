@@ -208,8 +208,10 @@ h1, h3 {
   @include flexbox;
   @include justify-content(flex-end);
   button {
+    font-size: 1.7em;
     border: 0;
     background-color:transparent;
+    padding-right: 5px;
     cursor: pointer;
     color: $font-color;
     &:hover,
