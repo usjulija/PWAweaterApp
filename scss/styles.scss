@@ -150,6 +150,10 @@ h1, h3 {
 #app {
   @extend %flexbox;
   @include flex-direction(column);
+  @media screen and (min-width: 1150px) {
+    @include flex-direction(row);
+    @include flex-flow(wrap);
+  }
 }
 
 //loading animation
@@ -269,10 +273,19 @@ h1, h3 {
       max-width: 50%;
     }
   }
+
   @media screen and (min-width: 950px) {
-      width: 80%;
-      max-width: 780px;
+      max-width: 750px;
     }
+
+  @media screen and (min-width: 1165px) {
+      max-width: 500px;
+      @include flex(50%);
+    }
+
+  @media screen and (min-width: 1360px) {
+      max-width: 650px;
+  }
 }
 
 

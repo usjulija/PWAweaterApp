@@ -168,6 +168,16 @@ h1, h3 {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
+  @media screen and (min-width: 1150px) {
+    #app {
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-flow: wrap;
+      -moz-flex-flow: wrap;
+      -ms-flex-flow: wrap;
+      flex-flow: wrap; } }
 
 .locating {
   margin-top: 25px;
@@ -297,8 +307,18 @@ h1, h3 {
     max-width: 50%; }
   @media screen and (min-width: 950px) {
     .card {
-      width: 80%;
-      max-width: 780px; } }
+      max-width: 750px; } }
+  @media screen and (min-width: 1165px) {
+    .card {
+      max-width: 500px;
+      -webkit-box-flex: 50%;
+      -moz-box-flex: 50%;
+      -webkit-flex: 50%;
+      -ms-flex: 50%;
+      flex: 50%; } }
+  @media screen and (min-width: 1360px) {
+    .card {
+      max-width: 650px; } }
 
 .weather-circles-container {
   -webkit-flex-flow: wrap;
